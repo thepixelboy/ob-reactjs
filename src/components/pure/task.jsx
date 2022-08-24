@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import { Task } from "../../models/task.class";
 
 const TaskComponent = ({ task }) => {
+  useEffect(() => {
+    console.log("A task has been created");
+    return () => {
+      console.log(`Task ${task.name} is going to be unmounted`);
+    };
+  }, [task]);
+
   return (
     <div>
       <h2>Name: {task.name}</h2>
