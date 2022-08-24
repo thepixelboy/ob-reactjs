@@ -1,6 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
-import GreetingStyled from "./components/pure/greetingStyled";
+import { Clock } from "./hooks/lifecycle/Clock";
+// import GreetingStyled from "./components/pure/greetingStyled";
 // import Ejemplo4 from "./hooks/ejemplo4";
 // import MiComponenteConContexto from "./hooks/ejemplo3";
 // import Greeting from "./components/pure/greeting";
@@ -26,7 +27,8 @@ function App() {
         {/* <Ejemplo4 nombre="John Doe">
           <h3>Contenido del props.children</h3>
         </Ejemplo4> */}
-        <GreetingStyled name="John Doe"></GreetingStyled>
+        {/* <GreetingStyled name="John Doe"></GreetingStyled> */}
+        <Clock></Clock>
       </header>
     </div>
   );
