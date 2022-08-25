@@ -6,3 +6,15 @@ h1 {
   font-weight: bold;
   color: cadetblue;
 }
+
+.task-status {
+  i.completed {
+    color: green;
+  }
+  i.pending {
+    color: gray;
+  }
+  i.delete {
+    color: tomato;
+  }
+}
