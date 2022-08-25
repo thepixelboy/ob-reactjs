@@ -14,12 +14,22 @@ const TaskComponent = ({ task }) => {
   }, [task]);
 
   return (
-    <div>
-      <h2 className="task-name">Name: {task.name}</h2>
-      <h3>Description: {task.description}</h3>
-      <h4>Level: {task.level}</h4>
-      <h5>This task is: {task.completed ? "COMPLETED" : "PENDING"}</h5>
-    </div>
+    <tr className="fw-normal">
+      <th>
+        <span className="task-ms-2">{task.name}</span>
+      </th>
+      <td className="align-middle">
+        <span>{task.description}</span>
+      </td>
+      <td className="align-middle">
+        {/* TODO: Sustituir por un badge de Bootstrap */}
+        <span>{task.level}</span>
+      </td>
+      <td className="align-middle">
+        {/* TODO: Sustituir por un icono de Bootstrap */}
+        <span>{task.completed}</span>
+      </td>
+    </tr>
   );
 };
 
