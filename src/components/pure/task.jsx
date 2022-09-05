@@ -6,7 +6,7 @@ import { Task } from "../../models/task.class";
 import "../../styles/task.scss";
 import { LEVELS } from "../../models/levels.enum";
 
-const TaskComponent = ({ task }) => {
+const TaskComponent = ({ task, complete, remove }) => {
   useEffect(() => {
     console.log("A task has been created");
     return () => {
@@ -51,15 +51,17 @@ const TaskComponent = ({ task }) => {
         </h6>
       </td>
       <td className="align-middle task-status">
-        <i className={taskStatuStyle()}></i>
-        <i className="bi-trash delete"></i>
+        <i onClick={() => complete(task)} className={taskStatuStyle()}></i>
+        <i onClick={() => remove(task)} className="bi-trash delete"></i>
       </td>
     </tr>
   );
 };
 
 TaskComponent.propTypes = {
-  task: PropTypes.instanceOf(Task),
+  task: PropTypes.instanceOf(Task).isRequired,
+  complete: PropTypes.func.isRequired,
+  remove: PropTypes.func.isRequired,
 };
 
 export default TaskComponent;

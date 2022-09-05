@@ -8,6 +8,7 @@ h1 {
 }
 
 .task-status {
+  cursor: pointer;
   i.completed {
     color: green;
   }
