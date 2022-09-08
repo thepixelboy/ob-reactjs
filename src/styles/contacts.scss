@@ -1,0 +1,29 @@
+h1,
+h2 {
+  color: coral;
+  padding: 0 !important;
+}
+
+.contact-name {
+  font-weight: bold;
+  color: cadetblue;
+}
+
+.contact-status,
+.contact-actions {
+  font-size: 1.4em;
+
+  i.connected {
+    color: green;
+  }
+  i.disconnected {
+    color: gray;
+  }
+  i.delete {
+    color: tomato;
+  }
+}
+
+.contact-actions {
+  cursor: pointer;
+}
