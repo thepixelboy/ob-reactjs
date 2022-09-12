@@ -1,5 +1,6 @@
 // import logo from "./logo.svg";
 import "./App.css";
+import OptionalRdender from "./components/pure/optionalRdender";
 // import ContactListComponent from "./components/containers/contact_list";
 // import Parent from "./components/containers/parent";
 // import { Clock } from "./hooks/lifecycle/Clock";
@@ -8,10 +9,12 @@ import "./App.css";
 // import MiComponenteConContexto from "./hooks/ejemplo3";
 // import Greeting from "./components/pure/greeting";
 // import GreetingF from "./components/pure/greetingF";
-import TaskListComponent from "./components/containers/task_list";
 // import Contact from "./components/containers/contact";
 // import Ejemplo1 from "./hooks/ejemplo1";
 // import Ejemplo2 from "./hooks/ejemplo2";
+
+// Aplicación evolutiva
+// import TaskListComponent from "./components/containers/task_list";
 
 function App() {
   return (
@@ -34,8 +37,11 @@ function App() {
       {/* </header> */}
       {/* Gestión de eventos */}
       {/* <Parent></Parent> */}
-      <TaskListComponent></TaskListComponent>
       {/* <ContactListComponent></ContactListComponent> */}
+      {/* Ejemplos de renderizado condicional */}
+      <OptionalRdender></OptionalRdender>
+      {/* Aplicación evolutiva */}
+      {/* <TaskListComponent></TaskListComponent> */}
     </div>
   );
 }
