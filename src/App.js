@@ -1,6 +1,7 @@
 // import logo from "./logo.svg";
 import "./App.css";
-import OptionalRdender from "./components/pure/optionalRdender";
+import RandomColoredBox from "./components/pure/randomColor";
+// import OptionalRdender from "./components/pure/optionalRdender";
 // import ContactListComponent from "./components/containers/contact_list";
 // import Parent from "./components/containers/parent";
 // import { Clock } from "./hooks/lifecycle/Clock";
@@ -39,7 +40,8 @@ function App() {
       {/* <Parent></Parent> */}
       {/* <ContactListComponent></ContactListComponent> */}
       {/* Ejemplos de renderizado condicional */}
-      <OptionalRdender></OptionalRdender>
+      {/* <OptionalRdender></OptionalRdender> */}
+      <RandomColoredBox></RandomColoredBox>
       {/* Aplicación evolutiva */}
       {/* <TaskListComponent></TaskListComponent> */}
     </div>
