@@ -1,5 +1,6 @@
 // import logo from "./logo.svg";
 import "./App.css";
+import LoginFormik from "./components/pure/forms/loginFormik";
 // import RandomColoredBox from "./components/pure/randomColor";
 // import OptionalRdender from "./components/pure/optionalRdender";
 // import ContactListComponent from "./components/containers/contact_list";
@@ -15,7 +16,7 @@ import "./App.css";
 // import Ejemplo2 from "./hooks/ejemplo2";
 
 // Aplicación evolutiva
-import TaskListComponent from "./components/containers/task_list";
+// import TaskListComponent from "./components/containers/task_list";
 
 function App() {
   return (
@@ -36,14 +37,20 @@ function App() {
       {/* <GreetingStyled name="John Doe"></GreetingStyled> */}
       {/* <Clock></Clock> */}
       {/* </header> */}
+
       {/* Gestión de eventos */}
       {/* <Parent></Parent> */}
       {/* <ContactListComponent></ContactListComponent> */}
+
       {/* Ejemplos de renderizado condicional */}
       {/* <OptionalRdender></OptionalRdender> */}
       {/* <RandomColoredBox></RandomColoredBox> */}
+
+      {/* Ejemplo de uso de Formik */}
+      <LoginFormik></LoginFormik>
+
       {/* Aplicación evolutiva */}
-      <TaskListComponent></TaskListComponent>
+      {/* <TaskListComponent></TaskListComponent> */}
     </div>
   );
 }
