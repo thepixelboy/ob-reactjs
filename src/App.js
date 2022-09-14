@@ -1,6 +1,6 @@
 // import logo from "./logo.svg";
 import "./App.css";
-import RandomColoredBox from "./components/pure/randomColor";
+// import RandomColoredBox from "./components/pure/randomColor";
 // import OptionalRdender from "./components/pure/optionalRdender";
 // import ContactListComponent from "./components/containers/contact_list";
 // import Parent from "./components/containers/parent";
@@ -15,7 +15,7 @@ import RandomColoredBox from "./components/pure/randomColor";
 // import Ejemplo2 from "./hooks/ejemplo2";
 
 // Aplicación evolutiva
-// import TaskListComponent from "./components/containers/task_list";
+import TaskListComponent from "./components/containers/task_list";
 
 function App() {
   return (
@@ -41,9 +41,9 @@ function App() {
       {/* <ContactListComponent></ContactListComponent> */}
       {/* Ejemplos de renderizado condicional */}
       {/* <OptionalRdender></OptionalRdender> */}
-      <RandomColoredBox></RandomColoredBox>
+      {/* <RandomColoredBox></RandomColoredBox> */}
       {/* Aplicación evolutiva */}
-      {/* <TaskListComponent></TaskListComponent> */}
+      <TaskListComponent></TaskListComponent>
     </div>
   );
 }

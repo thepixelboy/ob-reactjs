@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import { Task } from "../../models/task.class";
+import { LEVELS } from "../../models/levels.enum";
 
 // Importamos la hoja de estilos task.scss
 import "../../styles/task.scss";
-import { LEVELS } from "../../models/levels.enum";
 
 const TaskComponent = ({ task, complete, remove }) => {
   useEffect(() => {
@@ -29,16 +29,20 @@ const TaskComponent = ({ task, complete, remove }) => {
   }
 
   // Returns an icon style and color depending on task's status
-  function taskStatuStyle() {
+  function taskActionsStyle() {
     if (task.completed) {
-      return "bi-toggle-on completed";
+      return "bi bi-toggle-on completed";
     } else {
-      return "bi-toggle-off pending";
+      return "bi bi-toggle-off";
     }
   }
 
+  let taskStatus = task.completed
+    ? "fw-normal task-status completed"
+    : "fw-normal task-status";
+
   return (
-    <tr className="fw-normal">
+    <tr className={taskStatus}>
       <th>
         <span className="task-ms-2">{task.name}</span>
       </th>
@@ -50,9 +54,9 @@ const TaskComponent = ({ task, complete, remove }) => {
           <span className={taskLevelBadgeStyle()}>{task.level}</span>
         </h6>
       </td>
-      <td className="align-middle task-status">
-        <i onClick={() => complete(task)} className={taskStatuStyle()}></i>
-        <i onClick={() => remove(task)} className="bi-trash delete"></i>
+      <td className="align-middle task-actions">
+        <i onClick={() => complete(task)} className={taskActionsStyle()}></i>
+        <i onClick={() => remove(task)} className="bi bi-trash delete"></i>
       </td>
     </tr>
   );

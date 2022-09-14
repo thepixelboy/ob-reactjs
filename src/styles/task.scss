@@ -7,15 +7,23 @@ h1 {
   color: cadetblue;
 }
 
-.task-status {
+.task-actions {
   cursor: pointer;
+  color: gray;
   i.completed {
     color: green;
   }
-  i.pending {
-    color: gray;
-  }
   i.delete {
     color: tomato;
+  }
+}
+
+.task-status {
+  font-weight: bold;
+  color: tomato;
+
+  &.completed {
+    color: gray;
+    text-decoration: line-through;
   }
 }
