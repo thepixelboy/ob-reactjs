@@ -1,6 +1,7 @@
 // import logo from "./logo.svg";
 import "./App.css";
-import LoginFormik from "./components/pure/forms/loginFormik";
+import RegisterFormik from "./components/pure/forms/registerFormik";
+// import LoginFormik from "./components/pure/forms/loginFormik";
 // import RandomColoredBox from "./components/pure/randomColor";
 // import OptionalRdender from "./components/pure/optionalRdender";
 // import ContactListComponent from "./components/containers/contact_list";
@@ -47,8 +48,8 @@ function App() {
       {/* <RandomColoredBox></RandomColoredBox> */}
 
       {/* Ejemplo de uso de Formik */}
-      <LoginFormik></LoginFormik>
-
+      {/* <LoginFormik></LoginFormik> */}
+      <RegisterFormik></RegisterFormik>
       {/* Aplicación evolutiva */}
       {/* <TaskListComponent></TaskListComponent> */}
     </div>
