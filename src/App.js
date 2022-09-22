@@ -1,6 +1,6 @@
 // import logo from "./logo.svg";
 import "./App.css";
-import RegisterFormik from "./components/pure/forms/registerFormik";
+// import RegisterFormik from "./components/pure/forms/registerFormik";
 // import LoginFormik from "./components/pure/forms/loginFormik";
 // import RandomColoredBox from "./components/pure/randomColor";
 // import OptionalRdender from "./components/pure/optionalRdender";
@@ -17,7 +17,7 @@ import RegisterFormik from "./components/pure/forms/registerFormik";
 // import Ejemplo2 from "./hooks/ejemplo2";
 
 // Aplicación evolutiva
-// import TaskListComponent from "./components/containers/task_list";
+import TaskListComponent from "./components/containers/task_list";
 
 function App() {
   return (
@@ -49,9 +49,9 @@ function App() {
 
       {/* Ejemplo de uso de Formik */}
       {/* <LoginFormik></LoginFormik> */}
-      <RegisterFormik></RegisterFormik>
+      {/* <RegisterFormik></RegisterFormik> */}
       {/* Aplicación evolutiva */}
-      {/* <TaskListComponent></TaskListComponent> */}
+      <TaskListComponent></TaskListComponent>
     </div>
   );
 }

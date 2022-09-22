@@ -5,7 +5,8 @@ import TaskComponent from "../pure/task";
 
 // Importamos la hoja de estilos task.scss
 import "../../styles/task.scss";
-import TaskForm from "../pure/forms/taskForm";
+// import TaskForm from "../pure/forms/taskForm";
+import TaskFormik from "../pure/forms/taskFormik";
 
 const TaskListComponent = () => {
   const defaultTask1 = new Task(
@@ -120,9 +121,9 @@ const TaskListComponent = () => {
             style={{ position: "relative", height: "400px" }}
           >
             {loading ? (
-              <div class="d-flex justify-content-center">
-                <div class="spinner-border" role="status">
-                  <span class="visually-hidden">Loading tasks...</span>
+              <div className="d-flex justify-content-center">
+                <div className="spinner-border" role="status">
+                  <span className="visually-hidden">Loading tasks...</span>
                 </div>
               </div>
             ) : (
@@ -130,7 +131,8 @@ const TaskListComponent = () => {
             )}
           </div>
         </div>
-        <TaskForm add={addTask} length={tasks.length}></TaskForm>
+        <TaskFormik add={addTask} length={tasks.length}></TaskFormik>
+        {/* <TaskForm add={addTask} length={tasks.length}></TaskForm> */}
       </div>
       {/* TODO: Use for/map to render tasks list  */}
       {/* <TaskComponent task={defaultTask}></TaskComponent> */}
