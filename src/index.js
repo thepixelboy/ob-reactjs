@@ -7,13 +7,15 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 // ! Importante: los estilos personalizados deben cargarse siempre después de los estilos de Bootstrap
 
 import "./index.css";
-import App from "./App";
+// import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import AppRoutingOne from "./AppRoutingOne";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    {/* <App /> */}
+    <AppRoutingOne></AppRoutingOne>
   </React.StrictMode>
 );
 
