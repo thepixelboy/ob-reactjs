@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
 
 // Añadimos Bootstrap al proyecto
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -14,8 +15,10 @@ import AppRoutingOne from "./AppRoutingOne";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    {/* <App /> */}
-    <AppRoutingOne></AppRoutingOne>
+    <BrowserRouter>
+      {/* <App /> */}
+      <AppRoutingOne></AppRoutingOne>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
