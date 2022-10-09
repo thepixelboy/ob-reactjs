@@ -1,10 +1,11 @@
-import { useEffect, useParams } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 
 import "./App.css";
 import DashboardPage from "./pages/dashboard/DashboardPage";
 import LoginPage from "./pages/auth/LoginPage";
 import NotFoundPage from "./pages/404/NotFoundPage";
+import TaskListComponent from "./components/containers/task_list";
+import RegisterPage from "./pages/auth/RegisterPage";
 
 function AppRoutingFinal() {
   // TODO Change to a value from sessionStorage
@@ -30,6 +31,13 @@ function AppRoutingFinal() {
           }
         />
         <Route path="login" element={<LoginPage />} />
+        <Route path="register" element={<RegisterPage />} />
+        <Route
+          path="tasks"
+          element={
+            loggedIn ? <TaskListComponent /> : <Navigate to="/login" replace />
+          }
+        />
         <Route path="*" element={<NotFoundPage />} />
       </Route>
     </Routes>

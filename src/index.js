@@ -19,7 +19,7 @@ root.render(
     <BrowserRouter>
       {/* <App /> */}
       {/* <AppRoutingOne></AppRoutingOne> */}
-      <AppRoutingFinal></AppRoutingFinal>
+      <AppRoutingFinal />
     </BrowserRouter>
   </React.StrictMode>
 );
