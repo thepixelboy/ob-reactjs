@@ -1,5 +1,7 @@
 // import logo from "./logo.svg";
 import "./App.css";
+// import AsyncExpample from "./components/pure/AsyncExpample";
+import ObservableExample from "./components/pure/ObservableExample";
 // import RegisterFormik from "./components/pure/forms/registerFormik";
 // import LoginFormik from "./components/pure/forms/loginFormik";
 // import RandomColoredBox from "./components/pure/randomColor";
@@ -17,7 +19,7 @@ import "./App.css";
 // import Ejemplo2 from "./hooks/ejemplo2";
 
 // Aplicación evolutiva
-import TaskListComponent from "./components/containers/task_list";
+// import TaskListComponent from "./components/containers/task_list";
 
 function App() {
   return (
@@ -50,8 +52,13 @@ function App() {
       {/* Ejemplo de uso de Formik */}
       {/* <LoginFormik></LoginFormik> */}
       {/* <RegisterFormik></RegisterFormik> */}
+
+      {/* Ejemplos de procesos asíncronos */}
+      {/* <AsyncExpample></AsyncExpample> */}
+      <ObservableExample></ObservableExample>
+
       {/* Aplicación evolutiva */}
-      <TaskListComponent></TaskListComponent>
+      {/* <TaskListComponent></TaskListComponent> */}
     </div>
   );
 }
