@@ -3,6 +3,7 @@ import {
   getAllUsers,
   getAllUsersPaginated,
   getUserDetails,
+  login,
 } from "../../services/fetchService";
 
 const FetchExample = () => {
@@ -67,11 +68,35 @@ const FetchExample = () => {
       });
   };
 
+  const authUser = () => {
+    login("eve.holt@reqres.in", "cityslicka")
+      .then((response) => {
+        console.log("TOKEN: ", response.token);
+        sessionStorage.setItem("token", response.token);
+      })
+      .catch((error) => {
+        alert(`Unable to authenticate the user: ${error}`);
+      })
+      .finally(() => {
+        console.log("Finished login proccess");
+      });
+  };
+
   return (
     <div>
-      <h2>User list:</h2>
+      <h2>User list</h2>
       {users.map((user, index) => (
-        <p key={index} onClick={() => getSingleUser(user.id)}>
+        <p
+          key={index}
+          onClick={() => getSingleUser(user.id)}
+          style={{ cursor: "pointer" }}
+        >
+          <img
+            src={user.avatar}
+            alt="avatar"
+            style={{ width: "16px", height: "16px" }}
+            className="me-2 align-text-top"
+          />
           {user.first_name} {user.last_name}
         </p>
       ))}
@@ -85,20 +110,29 @@ const FetchExample = () => {
         1
       </button>
       <button
-        className="btn btn-lg btn-primary"
+        className="btn btn-lg btn-primary me-2"
         onClick={() => getPaginatedUsers(2)}
       >
         2
       </button>
+      <button onClick={authUser} className="btn btn-lg btn-primary">
+        Simulate User Login
+      </button>
 
-      {user.id > 0 && (
-        <div>
-          <h3>User details:</h3>
-          <p>Name: {user.first_name}</p>
-          <p>Last name: {user.last_name}</p>
-          <p>Email: {user.email}</p>
-          <img src={user.avatar} alt="avatar" />
+      {user.id > 0 ? (
+        <div class="card mt-4">
+          <img src={user.avatar} alt="avatar" class="card-img-top" />
+          <div class="card-body">
+            <h5 class="card-title">
+              {user.first_name} {user.last_name}
+            </h5>
+            <a href="mailto:{user.email}">{user.email}</a>
+          </div>
         </div>
+      ) : (
+        <h6 className="mt-4">
+          Please click any user to see detailed information.
+        </h6>
       )}
     </div>
   );
