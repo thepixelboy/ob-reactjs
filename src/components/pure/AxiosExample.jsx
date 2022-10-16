@@ -29,7 +29,7 @@ const AxiosExample = () => {
             <img src={user.picture.large} className="card-img-top" alt="..." />
             <div className="card-body">
               <h5 className="card-title">
-                {user.name.first} {user.name.last}
+                {user.name.title} {user.name.first} {user.name.last}
               </h5>
               <p className="card-text">{user.email}</p>
             </div>
